@@ -8,14 +8,13 @@ const btnName = document.querySelector('.name')
 
 
 
-btnSubmit.addEventListener('click', (event) => {
-    event.preventDefault();
-  window.history.back();
-    let nameSubject = btnName.value;   
-    main.innerHTML = `<div>
-    <h1>
-     ${nameSubject}
-    </h1>   
-</div>`
+btnSubmit.addEventListener('click', (event) => {  
+    event.preventDefault() 
+    let nameSubject = btnName.value;  
+    localStorage.setItem('name', nameSubject) ;  
+    
+    main.innerHTML = localStorage.getItem("name");
 
 }, true)
+
+
