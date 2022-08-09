@@ -6,28 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="">
-    <header>Top secret</header>
-    <main>
-      <div>
-        <h1>
+  <body class="font-poppins">
+    <header
+      class="relative flex items-center justify-center h-screen overflow-hidden"
+    >
+      <div
+        class="container mx-auto max-w-4xl relative z-30 p-8 text-black bg-purple-400 bg-opacity-50 rounded-xl"
+      >
+        <h1 class="text-6xl font-black tracking-wider text-center mb-6">
           Descubra el poderoso método secreto de manifestación de 3 dígitos de
           Nikola Tesla!
         </h1>
-        <p>
-          Complete los detalles a continuación y será redirigido al video
-          secreto:
-        </p>
-        <div>
+        <p class="text-2xl font-bold text-center mb-6">
+          Complete los detalles a continuación y será redirigido al video secreto
+        </p>        
           <form
             action="https://app.mailingboss.com/lists/62ece82c9708b/subscribe"
-            method="post"
+            method="post" 
+            class="flex flex-col gap-10 mt-8"          
           >
-            <div class="form-group">
-              <label for="FNAME">Nombre</label>
+          <div class="flex space-x-4">
+            <div class="form-group flex flex-col w-full md:w-1/2 mx-auto">              
               <input
-                class="name form-control"
+                class="form-control text-black py-4 px-8 rounded-xl w-full"
                 required
                 placeholder="Nombre"
                 name="FNAME"
@@ -35,10 +41,9 @@
                 id="FNAME"
               />
             </div>
-            <div class="form-group">
-              <label for="EMAIL">Email</label>
+            <div class="form-group flex flex-col w-full md:w-1/2 mx-auto">             
               <input
-                class="form-control"
+                class="form-control text-black py-4 px-8 rounded-xl w-full"
                 required
                 placeholder="Email"
                 name="EMAIL"
@@ -46,17 +51,21 @@
                 id="EMAIL"
               />
             </div>
-            <input              
-              type="submit"
-              class="submit btn btn-default"
-              value="Inscrever"
-            />
+          </div>
+            <input type="submit" class="btn btn-default w-full md:w-1/2 mx-auto border cursor-pointer border-black font-black text-black text-2xl py-4 px-8 rounded-xl" value="Descubra" />
           </form>
-        </div>
-        <div class="outpost"></div>
+        
       </div>
-      
-    </main>
+      <video
+        autoplay
+        loop
+        muted
+        class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+      >
+        <source src="videos/fundo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </header>
     <script src="app.js"></script>
   </body>
 </html>
